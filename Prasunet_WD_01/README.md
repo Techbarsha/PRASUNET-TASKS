@@ -1,3 +1,3 @@
-# 3d-landing-page
-3D Animated Landing Page.
+# Indian-Art-landing-page
+Indian Art Landing Page.
 Link: https://indianartlandingpage-ozsk6olee-barshas-projects-caab219c.vercel.app/
