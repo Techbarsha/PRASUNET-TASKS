@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Stopwatch</title>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="assets/back.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="wrap">
+        <div class="left_page">
+            <img class="clock" src="assets/clock.png" alt="">
+            <img id="arrow3" class="s_hours" src="assets/s_h.png" alt="">
+            <img id="arrow2" class="s_min" src="assets/s_min.png" alt="">
+            <img id="arrow1" class="s_sec" src="assets/s_sec.png" alt="">
+        </div>
+        <div class="right_page">
+            <div class="row1">
+                <span class="time animated-time" id="hours"></span>
+                <span class="gg">|hours|</span>
+                <span class="time animated-time" id="minutes"></span>
+                <span class="gg">|minutes|</span>
+                <span class="time animated-time" id="seconds"></span>
+                <span class="gg">|seconds|</span>
+                <span class="time animated-time" id="mseconds"></span>
+                <span class="gg">|milliseconds|</span>
+            </div>
+            <div class="row">
+                <div class="start" id="start">start</div>
+                <div class="pause" id="pause">pause</div>
+                <div class="reset" id="reset">reset</div>
+                <div class="lap" id="lap">lap</div>
+            </div>
+            <div class="laps" id="laps"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
