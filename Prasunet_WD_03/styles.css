@@ -1,0 +1,81 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    background: linear-gradient(130deg, #ff9a9e 0%, #fad0c4 100%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 15s ease infinite;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@keyframes gradientAnimation {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.cell {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cell:hover {
+    transform: scale(1.1) rotate(3deg);
+    background-color: #f0f0f0;
+}
+
+.animated {
+    animation: bounce-in 0.5s forwards;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body.dark-mode .cell {
+    background-color: #555;
+}
+
+body.dark-mode .container {
+    background-color: #444;
+}
+
+.theme-toggle-container {
+    z-index: 10;
+}
+
+/* Animation for player X and O font colors */
+@keyframes colorChange {
+    0% { color: #ff6347; } /* Tomato color */
+    50% { color: #4682b4; } /* Steel blue color */
+    100% { color: #ff6347; } /* Tomato color */
+}
+
+.player-X, .player-O {
+    animation: colorChange 3s infinite;
+    font-weight: bold;
+}

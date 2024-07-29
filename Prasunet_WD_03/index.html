@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex items-center justify-center h-screen relative light-mode">
+    <div class="parallax-bg"></div>
+    <div class="container text-center">
+        <h1 class="text-4xl mb-8">Tic-Tac-Toe</h1>
+        <div id="game-board" class="grid grid-cols-3 gap-1 mx-auto mb-8 w-72 h-72">
+            <!-- Game cells will be generated here -->
+        </div>
+        <div class="mb-4">
+            <button id="reset-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset Game</button>
+            <button id="ai-toggle-button" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Play Against AI</button>
+            <button id="human-toggle-button" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">Play Against Human</button>
+            <button id="undo-button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Undo Move</button>
+        </div>
+        <div class="mb-4">
+            <label for="ai-difficulty" class="block text-lg mb-2">AI Difficulty:</label>
+            <select id="ai-difficulty" class="bg-gray-200 text-black font-bold py-2 px-4 rounded mb-4">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <div class="flex justify-center mb-4">
+            <div class="bg-white rounded shadow p-4 m-2 player-X">
+                <h2 class="text-xl font-bold">Player X</h2>
+                <p id="playerX-score" class="text-2xl">0</p>
+            </div>
+            <div class="bg-white rounded shadow p-4 m-2 player-O">
+                <h2 class="text-xl font-bold">Player O</h2>
+                <p id="playerO-score" class="text-2xl">0</p>
+            </div>
+        </div>
+        <div id="timer" class="text-xl mb-4">Time: 0s</div>
+        <div id="message" class="text-2xl mt-4"></div>
+    </div>
+    <div class="theme-toggle-container fixed top-4 right-4">
+        <button id="theme-toggle-button" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/1246/1246354.png" alt="Theme Toggle" class="w-6 h-6">
+        </button>
+    </div>
+    <audio id="win-sound" src="https://www.myinstants.com/media/sounds/victory.mp3"></audio>
+    <audio id="loss-sound" src="https://www.myinstants.com/media/sounds/sad-trombone.mp3"></audio>
+    <audio id="draw-sound" src="https://www.myinstants.com/media/sounds/tada.mp3"></audio>
+    <script src="app.js"></script>
+</body>
+</html>
